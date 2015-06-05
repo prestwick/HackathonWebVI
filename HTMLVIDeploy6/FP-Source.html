@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Function.gvi
+    </title>
+
+    <script src="jsResources/coherent.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            engine.call('DocumentReady');
+            $('#Source').on('blur', function () { engine.call('SendSourceBack', $('#Source').val()); })
+        });
+    </script>
+    <script type="text/javascript">
+	var SetTextArea = function(s) { $('#Source').val(s); }
+	var ClearTextArea = function() { $('#Source').val(''); }
+	var AppendTextArea = function(s) { var a = $('#Source').val(); $('#Source').val(a + s + '\n'); }
+    </script>
+</head>
+
+<body>
+    <textArea id='Source' rows='300' style='width: 100%'></textArea>
+</body>
+
+</html>

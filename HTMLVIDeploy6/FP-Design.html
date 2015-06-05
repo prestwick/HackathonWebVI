@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Function.gvi
+    </title>
+
+    <link rel="stylesheet" href="jsResources/jqwidgets/styles/jqx.base.css">
+    <link rel="stylesheet" href="jsResources/jqwidgets/styles/jqx.fresh.css">
+    <link rel="stylesheet" type="text/css" href="styles/niControlStyles.css">
+
+    <script src="jsResources/coherent.js"></script>
+    <script src="jsResources/observe.js"></script>
+    <script src="bower_components/document-register-element/build/document-register-element.max.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="jsResources/customevents/customevents.polyfill.js"></script>
+    <script src="jsResources/jqwidgets/jqxcore.js"></script>
+    <script src="jsResources/jqwidgets/jqxdata.js"></script>
+    <script src="jsResources/jqwidgets/jqxbuttons.js"></script>
+    <script src="jsResources/jqwidgets/jqxscrollbar.js"></script>
+    <script src="jsResources/jqwidgets/jqxchart.js"></script>
+    <script src="jsResources/jqwidgets/jqxnumberinput.js"></script>
+    <script src="jsResources/jqwidgets/jqxgauge.js"></script>
+    <script src="jsResources/jqwidgets/jqxslider.js"></script>
+    <script src="jsResources/jqwidgets/jqxinput.js"></script>
+    <script src="jsResources/jqwidgets/jqxcheckbox.js"></script>
+    <script src="jsResources/jqwidgets/jqxswitchbutton.js"></script>
+    <script src="jsResources/jqwidgets/jqxradiobutton.js"></script>
+    <script src="jsResources/jqwidgets/jqxtabs.js"></script>
+    <script src="jsResources/jqwidgets/jqxprogressbar.js"></script>
+    <script src="jsResources/jqwidgets/globalization/globalize.js"></script>
+    <script src="jsResources/jqwidgets/jqxtooltip.js"></script>
+    <script src="jsResources/jqwidgets/jqxcalendar.js"></script>
+    <script src="jsResources/jqwidgets/jqxdatetimeinput.js"></script>
+    <script src="jsResources/jqwidgets/jqxlistbox.js"></script>
+    <script src="jsResources/jqwidgets/jqxdropdownlist.js"></script>
+    <script src="jsResources/flot/jquery.flot.js"></script>
+    <script src="jsResources/flot/jquery.flot.axislabels.js"></script>
+    <script src="jsResources/flot/jquery.flot.symbol.js"></script>
+    <script src="jsResources/flot/jquery.flot.cursors.js"></script>
+    <script src="jsResources/flot/jquery.flot.resize.js"></script>
+    <script src="jsResources/flot/cbuffer.js"></script>
+    <script src="jsResources/flot/jquery.flot.historybuffer.js"></script>
+    <script src="jsResources/flot/jquery.flot.charting.js"></script>
+    
+    <script src="jsResources/JsFramework/niSupport.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niLocalization.js" type="text/javascript"></script>    
+    <script src="jsResources/JsFramework/niUIActivityService.js" type="text/javascript"></script>
+    
+    <script src="jsResources/JsFramework/Elements/ni-element.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-visual-component.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-visual.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-boolean-control.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-boolean-button.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-numeric-control.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-numeric-textbox.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-numeric-pointer.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-linear-numeric-pointer.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-radial-numeric-pointer.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-slider.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-gauge.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-progress-bar.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-linear-progress-bar.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-string-control.js"></script>
+    <script src="jsResources/JsFramework/Elements/ni-time-stamp-text-box.js"></script>
+
+    <script src="jsResources/JsFramework/niVisualComponentModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niVisualModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niNumericControlModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niNumericPointerModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niRadialNumericPointerModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niGaugeModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niLinearNumericPointerModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niSliderModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niNumericTextBoxModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niGraphBaseModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCartesianAxisModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCartesianPlotModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niPlotRendererModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCartesianGraphModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niChartModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanControlModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanContentControlModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanButtonModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanLEDModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niTextModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niLabelModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niHyperlinkModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niStringControlModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niImageModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCursorModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niTabControlModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niTabItemModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCheckBoxModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niRadioButtonModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanSwitchModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niProgressBarModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niLinearProgressBarModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niGuidelineModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niClusterModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niDropDownModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niTimeStampTextBoxModel.js" type="text/javascript"></script>
+
+    <script src="jsResources/JsFramework/niVIModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niVIModelService.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niVisualComponentViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niVisualViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niNumericControlViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niNumericPointerViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niLinearNumericPointerViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niRadialNumericPointerViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niGaugeViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niSliderViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niNumericTextBoxViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCartesianAxisViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCartesianPlotViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCartesianGraphViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niPlotRendererViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niChartViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanControlViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanButtonViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanLEDViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niTextViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niLabelViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niHyperlinkViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niStringControlViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niImageViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCursorViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niTabControlViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niTabItemViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niCheckBoxViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niRadioButtonViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niBooleanSwitchViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niProgressBarViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niLinearProgressBarViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niClusterViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niDropDownViewModel.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niTimeStampTextBoxViewModel.js" type="text/javascript"></script>
+
+    <script src="jsResources/JsFramework/niUpdateBase.js" type="text/javascript"></script>
+    <script src="jsResources/JsFramework/niEditorUpdateService.js" type="text/javascript"></script>
+
+    <script src="jsResources/JsFramework/Elements/ni-element-registration.js"></script>
+        
+    <script>
+        $(document).ready(function () {
+            engine.call('DocumentReady');
+        });
+    </script>
+
+</head>
+
+<body>
+    <section id="FrontPanelCanvas"> </section>
+
+    <script type="text/javascript">
+        (function () {
+            'use strict'
+
+            var viName = 'Function.gvi'
+            NationalInstruments.HtmlVI.viModelsService.addVI(viName);
+        })();
+    </script>
+</body>
+
+</html>
